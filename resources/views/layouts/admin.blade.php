@@ -68,6 +68,43 @@
                         class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a>
             </li>
 
+            @if (auth()->user()->roleuser()->first()->id == 1)
+            <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
+                <a class="app-menu__item" href="#" data-toggle="treeview">
+                    <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Karyawan</span>
+                    <i class="treeview-indicator fa fa-angle-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    
+                    <li><a class="treeview-item {{ request()->is('pegawai') ? 'active' : '' }}"
+                            href="{{ route('pegawai.index') }}"><i class="icon fa fa-circle-o"></i> Data Pegawai</a>
+                    </li>
+                    <li><a class="treeview-item {{ request()->is('pegawai/create') ? 'active' : '' }}"
+                            href="{{ route('pegawai.create') }}" target="" rel="noopener"><i
+                                class="icon fa fa-circle-o"></i> Tambah Karyawan</a></li>
+
+                </ul>
+            </li>   
+            <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
+                <a class="app-menu__item" href="#" data-toggle="treeview">
+                    <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">User</span>
+                    <i class="treeview-indicator fa fa-angle-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    
+                    <li><a class="treeview-item {{ request()->is('user') ? 'active' : '' }}"
+                            href="{{ route('user.index') }}"><i class="icon fa fa-circle-o"></i> Data User</a>
+                    </li>
+                    <li><a class="treeview-item {{ request()->is('user/create') ? 'active' : '' }}"
+                            href="{{ route('user.create') }}" target="" rel="noopener"><i
+                                class="icon fa fa-circle-o"></i> Tambah User</a></li>
+
+                </ul>
+            </li>   
+
+            @endif
+
+            @if (auth()->user()->roleuser()->first()->id == 3)
             <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
                 <a class="app-menu__item" href="#" data-toggle="treeview">
                     <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Karyawan</span>
@@ -87,6 +124,7 @@
 
                 </ul>
             </li>
+            @endif
 
             {{-- <li class="treeview {{ request()->is('pegawai', 'pegawai/*') ? 'is-expanded' : '' }}">
                 <a class="app-menu__item" href="#" data-toggle="treeview">
@@ -106,7 +144,7 @@
             {{-- <li><a class="app-menu__item {{ request()->is('chart') ? 'active' : '' }}" href="{{ url('chart') }}"><i
                         class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a>
             </li> --}}
-          </li>
+            </li>
 
             {{-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
                         class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Rekap Data</span><i
@@ -120,7 +158,9 @@
         </ul>
 
     </aside>
+
     @yield('content')
+
     <script src="{{ asset('template/docs/js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('template/docs/js/popper.min.js') }}"></script>
     <script src="{{ asset('template/docs/js/bootstrap.min.js') }}"></script>

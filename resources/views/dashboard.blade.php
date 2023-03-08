@@ -5,6 +5,7 @@ Dashboard
 @section('dashboard')
 active
 @endsection
+
 @section('content')
     <main class="app-content">
       <div class="app-title">

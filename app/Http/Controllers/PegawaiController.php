@@ -27,6 +27,7 @@ class PegawaiController extends Controller
     public function index()
     {
         $user = User::all();
+        
         $pegawai = Pegawai::orderBy('nama','desc');
         if (request()->nama) {
             $pegawai = $pegawai->where('nama','like','%'.request()->nama.'%');
