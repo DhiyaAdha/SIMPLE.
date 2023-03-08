@@ -6,13 +6,13 @@ Detail Pegawai
     <main class="app-content">
       <div class="app-title">
         <div class="div">
-          <h1><i class="fa fa-laptop"></i> Detail Pegawai</h1>
+          <h1><i class="fa fa-laptop"></i> Detail User</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item">Pegawai</li>
-          <li class="breadcrumb-item"><a href="/pegawai">Data Pegawai</a></li>
-          <li class="breadcrumb-item"><a href="#">Detail Pegawai</a></li>
+          <li class="breadcrumb-item">User</li>
+          <li class="breadcrumb-item"><a href="/user">Data User</a></li>
+          <li class="breadcrumb-item"><a href="#">Detail User</a></li>
         </ul>
       </div>			
       <div class="tile">

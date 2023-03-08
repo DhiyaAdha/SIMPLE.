@@ -27,7 +27,7 @@
                             {{ method_field('PUT') }}
                         @else
                             {{-- buat pegawai --}}
-                            <form class="form-horizontal" action="{{ route('pegawai.store') }}" method="post">
+                            <form class="form-horizontal" action="{{ route('user.store') }}" method="post">
                                 {{ csrf_field() }}
                     @endif
 
