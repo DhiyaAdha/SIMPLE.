@@ -14,7 +14,7 @@
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description"
         content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>@yield('title') | Sistem Kepegawaian</title>
+    <title>@yield('title') | SIMPEL.</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
 
 <body class="app sidebar-mini rtl">
     <header class="app-header" style="background-color: #FAAD14;"><a class="app-header__logo"
-            href="index.html">SIMPLE.</a>
+            href="index.html">SIMPEL.</a>
         <a class="app-sidebar__toggle" style="background-color: #ab9609;" href="#" data-toggle="sidebar"
             aria-label="Hide Sidebar"></a>
         <ul class="app-nav" style="background-color: #FAAD14;">
@@ -70,17 +70,17 @@
 
             <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
                 <a class="app-menu__item" href="#" data-toggle="treeview">
-                    <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Karyawan</span>
+                    <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Recepsionist</span>
                     <i class="treeview-indicator fa fa-angle-right"></i>
                 </a>
                 <ul class="treeview-menu">
                     
                     <li><a class="treeview-item {{ request()->is('pegawai') ? 'active' : '' }}"
-                        href="{{ route('pegawai.index') }}"><i class="icon fa fa-circle-o"></i> Data Pegawai</a>
+                        href="{{ route('pegawai.index') }}"><i class="icon fa fa-circle-o"></i> Data Enginering</a>
                     </li>
                     <li><a class="treeview-item {{ request()->is('pegawai/create') ? 'active' : '' }}"
                         href="{{ route('pegawai.create') }}" target="" rel="noopener"><i
-                        class="icon fa fa-circle-o"></i> Tambah Karyawan</a></li>
+                        class="icon fa fa-circle-o"></i> Tambah Receptionist</a></li>
                         
                     </ul>
                 </li>   

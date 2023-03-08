@@ -10,8 +10,8 @@ active
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Simpeg Dashboard</h1>
-          <p>Dashboard Sistem Kepegawaian</p>
+          <h1><i class="fa fa-dashboard"></i> Sistem Informasi | Dashboard</h1>
+          <p>Dashboard SIMPEL</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>

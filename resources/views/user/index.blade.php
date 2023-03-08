@@ -1,17 +1,17 @@
 @extends('layouts.admin')
 @section('title')
-Data Pegawai
+Data User
 @endsection
 @section('content')
     <main class="app-content">
       <div class="app-title">
         <div class="div">
-          <h1><i class="fa fa-laptop"></i> Data Pegawai</h1>
+          <h1><i class="fa fa-laptop"></i> Data User</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item">Pegawai</li>
-          <li class="breadcrumb-item"><a href="#">Data Pegawai</a></li>
+          <li class="breadcrumb-item">User</li>
+          <li class="breadcrumb-item"><a href="#">Data User</a></li>
         </ul>
       </div>
       <div class="tile mb-4">

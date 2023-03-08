@@ -19,7 +19,7 @@ class RoleUserSeeder extends Seeder
             [  'name' =>'Pimpinan', 'created_at' => date('Y-m-d h:i:s'), 'updated_at' => date('Y-m-d h:i:s') ],
             [  'name' => 'Admin', 'created_at' => date('Y-m-d h:i:s'), 'updated_at' => date('Y-m-d h:i:s') ],
             [  'name' => 'Karyawan', 'created_at' => date('Y-m-d h:i:s'), 'updated_at' => date('Y-m-d h:i:s') ],
-            [  'name' => 'Client', 'created_at' => date('Y-m-d h:i:s'), 'updated_at' => date('Y-m-d h:i:s') ],
+            [  'name' => 'Penghuni', 'created_at' => date('Y-m-d h:i:s'), 'updated_at' => date('Y-m-d h:i:s') ],
         ];
 
         RoleUser::insert($role);

@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login - Omah Koding</title>
+    <title>Login - SIMPEL</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 
     <section class="login-content" style="background-color:#FAAD14;">
         <div class="logo">
-            <h1>Pengeloaan Karyawan </h1>
+            <h1>SIMPEL</h1>
         </div>
         <div class="login-box">
             <form class="login-form" method="POST" action="{{ route('login') }}">

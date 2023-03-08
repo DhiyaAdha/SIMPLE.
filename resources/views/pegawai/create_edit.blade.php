@@ -6,12 +6,12 @@
     <main class="app-content">
         <div class="app-title">
             <div>
-                <h1><i class="fa fa-edit"></i> {{ isset($pegawai) ? 'Edit' : 'Tambah' }} Pegawai</h1>
+                <h1><i class="fa fa-edit"></i> {{ isset($pegawai) ? 'Edit' : 'Tambah' }} Receptionist</h1>
             </div>
             <ul class="app-breadcrumb breadcrumb">
                 <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-                <li class="breadcrumb-item">Pegawai</li>
-                <li class="breadcrumb-item"><a href="#">{{ isset($pegawai) ? 'Edit' : 'Tambah' }} Pegawai</a></li>
+                <li class="breadcrumb-item">Receptionist</li>
+                <li class="breadcrumb-item"><a href="#">{{ isset($pegawai) ? 'Edit' : 'Tambah' }} Receptionist</a></li>
             </ul>
         </div>
 
@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="form-group row">
-                          <label class="control-label col-md-3">Nama | Email </label>
+                          <label class="control-label col-md-3">Email  </label>
                           <div class="col-md-8">
                               <input required class="form-control" type="text" name="email"
                                   value="{{ isset($pegawai) ? $pegawai->email : '' }}">
@@ -100,7 +100,7 @@
                         </div>
 
                         <div class="form-group row">
-                          <label class="control-label col-md-3">Nama | Password </label>
+                          <label class="control-label col-md-3">Password </label>
                           <div class="col-md-8">
                               <input required class="form-control" type="text" name="password"
                                   value="{{ isset($pegawai) ? $pegawai->password : '' }}">
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="control-label col-md-3">Jenis Keryawan</label>
+                            <label class="control-label col-md-3">Jenis Enginering</label>
                             <div class="col-md-8">
                                 <select class="form-control" name="role_id" id="exampleSelect1">
                                     {{-- <option selected>Pilih Jenis Karyawan </option> --}}
@@ -155,6 +155,6 @@
                 </div>
             </div>
         </div>
-        
+
     </main>
 @endsection

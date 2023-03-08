@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    {{ isset($user) ? 'Edit' : 'Tambah' }} Pegawai
+    {{ isset($user) ? 'Edit' : 'Tambah' }} User
 @endsection
 @section('content')
     <main class="app-content">
@@ -11,7 +11,7 @@
             <ul class="app-breadcrumb breadcrumb">
                 <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
                 <li class="breadcrumb-item">user</li>
-                <li class="breadcrumb-item"><a href="#">{{ isset($user) ? 'Edit' : 'Tambah' }} User</a></li>
+                <li class="breadcrumb-item"><a href="#">{{ isset($user) ? 'Edit' : 'Tambah' }} user</a></li>
             </ul>
         </div>
 
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="control-label col-md-3">Nama | Email </label>
+                            <label class="control-label col-md-3">Akun Email </label>
                             <div class="col-md-8">
                                 <input required class="form-control" type="text" name="email"
                                     value="{{ isset($user) ? $user->email : '' }}">
@@ -60,7 +60,7 @@
                           </div>
 
                         <div class="form-group row">
-                            <label class="control-label col-md-3">Nama | Password </label>
+                            <label class="control-label col-md-3"> Password </label>
                             <div class="col-md-8">
                                 <input required class="form-control" type="text" name="password"
                                     value="{{ isset($user) ? $user->password : '' }}">
@@ -90,7 +90,7 @@
                                     {{-- <option selected>Pilih Jenis User </option>     --}}
                                     <option value="2">Admin</option>
                                     <option value="3">Karyawan</option>
-                                    <option value="4">Client</option>
+                                    <option value="4">Penghuni</option>
                                     
                                 </select>
                             </div>
