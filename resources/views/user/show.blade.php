@@ -19,34 +19,34 @@ Detail Pegawai
         <div class="page-header">
           <div class="row">
             <div class="col-md-12">
-				@if (isset($pegawai->foto))
+				{{-- @if (isset($pegawai->foto))
 					
 				<img src="{{asset('imgpegawai/'.$pegawai->foto)}}" width="180px" height="120px" alt="">
 				@else
 				<img src="{{asset('img/pegawai.png')}}" width="180px" height="120px" alt="">
 					
-				@endif 
+				@endif  --}}
             <table class="table-condensed">					
-            	<tr>
+            	{{-- <tr>
 					<td>NIP</td>
 					<td>:</td>
 					<td>{{$pegawai->nip}}</td>
-				</tr>
+				</tr> --}}
 				<tr>
 					<td>Nama</td>
 					<td>: </td>
-					<td>{{$pegawai->nama}}</td>
+					<td>{{$user->name}}</td>
 				</tr>
-				<tr>
+				{{-- <tr>
 					<td> Tempat, Tanggal Lahir</td>
 					<td>:</td>
 					<td>{{$pegawai->tmpt_lahir}}, {{$pegawai->tgl_lahir}}</td>
-				</tr>                               
-				<tr>
+				</tr>                                --}}
+				{{-- <tr>
 					<td> Jenis Kelamin</td>
 					<td>:</td>
 					<td>{{$pegawai->jenis_kelamin}}</td>
-				</tr>                               
+				</tr>                                --}}
 				{{-- <tr>
 					<td> Alamat</td>
 					<td>:</td>
@@ -78,18 +78,18 @@ Detail Pegawai
 				</tr>                               
 					<td> Email</td>
 					<td>:</td>
-					<td>{{$pegawai->email}}</td>
+					<td>{{$user->email}}</td>
 				</tr>                               
-				</tr>                               
+				{{-- </tr>                               
 					<td> Password</td>
 					<td>:</td>
 					<td>{{$pegawai->password}}</td>
-				</tr>                               
-				</tr>                               
+				</tr>                                --}}
+				{{-- </tr>                               
 					<td> Nomor HP</td>
 					<td>:</td>
 					<td>{{$pegawai->nohp}}</td>
-				</tr>                               
+				</tr>                                --}}
 			</table>
             </div>            
           </div>

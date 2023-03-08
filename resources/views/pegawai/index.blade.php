@@ -56,7 +56,7 @@ Data Pegawai
                         <img src="{{asset('img/pegawai.png')}}" alt="" width="50px" height="50px">
                         @endif
                     </td> --}}
-                    <td><a href="{{route('pegawai.show', $tampil->id)}}">{{$tampil->nama}}</a></td>
+                    <td>{{$tampil->nama}}</td>
                       <td>{{$tampil->role->name}}</td>
                       <td>{{$tampil->tmpt_lahir}}, {{ Carbon\Carbon::parse($tampil->tgl_lahir)->isoFormat('DD MMMM Y')}}</td>
                       <td>{{$tampil->jenis_kelamin}}</td>

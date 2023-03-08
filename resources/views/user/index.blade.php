@@ -35,35 +35,32 @@ Data Pegawai
                       {{-- <th>No</th> --}}
                       {{-- <th>Foto</th> --}}
                       <th>Nama</th>
-                      <th>Karyawan</th>
-                      <th>TTL</th>
-                      <th>JK</th>
-                      <th>No. Telp</th>
+                      <th>Role</th>
+                      <th>Email</th>
                       <th>More</th>
                     </tr>
                   </thead>
                   <tbody>
                     {{-- @php
                         $no=1 + (request()->limit ? intval(request()->limit) : 10) * ((request()->page ? intval(request()->page) : 1) - 1);
-                    @endphp
+                    @endphp --}}
                     @foreach($user as $tampil)
                     <tr> 
                       
-                    <td><a href="{{route('user.show', $tampil->id)}}">{{$tampil->nama}}</a></td>
-                      <td>{{$tampil->role->name}}</td>
-                      <td>{{$tampil->tmpt_lahir}}, {{ Carbon\Carbon::parse($tampil->tgl_lahir)->isoFormat('DD MMMM Y')}}</td>
-                      <td>{{$tampil->jenis_kelamin}}</td>
-                      <td>{{$tampil->nohp}}</td>
-                      <td>
-                        <a href="{{url('/pegawai/'.$tampil->id.'/edit')}}"
+                    <td><a href="{{route('user.show', $tampil->id)}}">{{$tampil->name}}</a></td>
+                      <td>{{$tampil->roleuser()->first()->name ?? ''}}</td>
+                      {{-- <td>{{$tampil->tmpt_lahir}}, {{ Carbon\Carbon::parse($tampil->tgl_lahir)->isoFormat('DD MMMM Y')}}</td> --}}
+                      <td>{{$tampil->email}}</td>
+                      {{-- <td>
+                        <a href="{{url('/user/'.$tampil->id.'/edit')}}"
                         class="btn btn-info"><span class="fa fa-edit (alias)"></span></a>
 
-                      </td>
+                      </td> --}}
                       <td>
                         <button class="btn btn-danger btn_modal_hapus" type="button" data-url="{{route('user.destroy', $tampil->id)}}" ><span class="fa fa-trash"></span></button>
                       </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                   </tbody>
                 </table>
                 {{-- {{ $pegawai->appends(request()->all())->links('pagination::bootstrap-4') }}    --}}

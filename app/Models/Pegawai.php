@@ -9,7 +9,7 @@ class Pegawai extends Model
 {
    use HasFactory;
 
-   // public function agama()
+   // public function agam    a()
    // {
    //    return $this->belongsTo(Agama::class, 'agama_id', 'id_agm');
    // }

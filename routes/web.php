@@ -40,8 +40,10 @@ use App\Http\Controllers\GolonganDarahController;
 // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/', [DashboardController::class,'index']);
-
     Route::resource('pegawai', PegawaiController::class); 
+
+    Route::resource('user', UserController::class);    
+
 
     Route::get('pegawai/pdf', [PegawaiController::class,'pdf'])->name('pegawai-pdf');
     Route::get('pegawai/pelatihan/{id}',[PelatihanController::class,'pel']);
@@ -53,7 +55,6 @@ use App\Http\Controllers\GolonganDarahController;
     Route::get('pegawai/pdf', [PegawaiController::class,'pdf'])->name('pegawai-pdf');
     
 
-    Route::resource('user', UserController::class);    
 
     // Route::middleware('auth')->group(function () {
 // });

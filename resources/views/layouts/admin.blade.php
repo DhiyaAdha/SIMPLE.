@@ -68,7 +68,6 @@
                         class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a>
             </li>
 
-            @if (auth()->user()->roleuser()->first()->id == 1)
             <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
                 <a class="app-menu__item" href="#" data-toggle="treeview">
                     <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Karyawan</span>
@@ -77,54 +76,32 @@
                 <ul class="treeview-menu">
                     
                     <li><a class="treeview-item {{ request()->is('pegawai') ? 'active' : '' }}"
-                            href="{{ route('pegawai.index') }}"><i class="icon fa fa-circle-o"></i> Data Pegawai</a>
+                        href="{{ route('pegawai.index') }}"><i class="icon fa fa-circle-o"></i> Data Pegawai</a>
                     </li>
                     <li><a class="treeview-item {{ request()->is('pegawai/create') ? 'active' : '' }}"
-                            href="{{ route('pegawai.create') }}" target="" rel="noopener"><i
-                                class="icon fa fa-circle-o"></i> Tambah Karyawan</a></li>
-
-                </ul>
-            </li>   
-            <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
-                <a class="app-menu__item" href="#" data-toggle="treeview">
-                    <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">User</span>
-                    <i class="treeview-indicator fa fa-angle-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    
-                    <li><a class="treeview-item {{ request()->is('user') ? 'active' : '' }}"
+                        href="{{ route('pegawai.create') }}" target="" rel="noopener"><i
+                        class="icon fa fa-circle-o"></i> Tambah Karyawan</a></li>
+                        
+                    </ul>
+                </li>   
+                <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
+                    <a class="app-menu__item" href="#" data-toggle="treeview">
+                        <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">User</span>
+                        <i class="treeview-indicator fa fa-angle-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        
+                        <li><a class="treeview-item {{ request()->is('user') ? 'active' : '' }}"
                             href="{{ route('user.index') }}"><i class="icon fa fa-circle-o"></i> Data User</a>
-                    </li>
-                    <li><a class="treeview-item {{ request()->is('user/create') ? 'active' : '' }}"
+                        </li>
+                        <li><a class="treeview-item {{ request()->is('user/create') ? 'active' : '' }}"
                             href="{{ route('user.create') }}" target="" rel="noopener"><i
-                                class="icon fa fa-circle-o"></i> Tambah User</a></li>
+                            class="icon fa fa-circle-o"></i> Tambah User</a></li>
+                            
+                        </ul>
+                    </li>   
+                    
 
-                </ul>
-            </li>   
-
-            @endif
-
-            @if (auth()->user()->roleuser()->first()->id == 3)
-            <li class="treeview {{ request()->is('agama', 'negara', 'darah', 'keluarga') ? 'is-expanded' : '' }}">
-                <a class="app-menu__item" href="#" data-toggle="treeview">
-                    <i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Karyawan</span>
-                    <i class="treeview-indicator fa fa-angle-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    {{-- <li><a class="treeview-item {{ request()->is('agama') ? 'active' : '' }}" href="{{route('agama.index')}}"><i class="icon fa fa-circle-o"></i> Agama</a></li>
-                    <li><a class="treeview-item {{ request()->is('negara') ? 'active' : '' }}" href="{{route('negara.index')}}"><i class="icon fa fa-circle-o"></i> Kewarganegaraan</a></li>
-                    <li><a class="treeview-item {{ request()->is('darah') ? 'active' : '' }}" href="{{route('darah.index')}}"><i class="icon fa fa-circle-o"></i> Golongan Darah</a></li>
-                    <li><a class="treeview-item {{ request()->is('keluarga') ? 'active' : '' }}" href="{{route('keluarga.index')}}"><i class="icon fa fa-circle-o"></i> Keluarga</a></li> --}}
-                    <li><a class="treeview-item {{ request()->is('pegawai') ? 'active' : '' }}"
-                            href="{{ route('pegawai.index') }}"><i class="icon fa fa-circle-o"></i> Data Pegawai</a>
-                    </li>
-                    <li><a class="treeview-item {{ request()->is('pegawai/create') ? 'active' : '' }}"
-                            href="{{ route('pegawai.create') }}" target="" rel="noopener"><i
-                                class="icon fa fa-circle-o"></i> Tambah Karyawan</a></li>
-
-                </ul>
-            </li>
-            @endif
 
             {{-- <li class="treeview {{ request()->is('pegawai', 'pegawai/*') ? 'is-expanded' : '' }}">
                 <a class="app-menu__item" href="#" data-toggle="treeview">

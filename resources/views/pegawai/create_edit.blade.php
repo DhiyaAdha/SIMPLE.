@@ -127,7 +127,7 @@
                             <label class="control-label col-md-3">Jenis Keryawan</label>
                             <div class="col-md-8">
                                 <select class="form-control" name="role_id" id="exampleSelect1">
-                                    <option selected>Pilih Jenis Karyawan </option>
+                                    {{-- <option selected>Pilih Jenis Karyawan </option> --}}
                                     <option value="1">teknisi-listrik</option>
                                     <option value="2">teknisi-mesin</option>
                                     <option value="3">IT-Support</option>
@@ -155,5 +155,6 @@
                 </div>
             </div>
         </div>
+        
     </main>
 @endsection

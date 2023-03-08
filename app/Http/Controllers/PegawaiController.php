@@ -27,7 +27,7 @@ class PegawaiController extends Controller
     public function index()
     {
         $user = User::all();
-        
+
         $pegawai = Pegawai::orderBy('nama','desc');
         if (request()->nama) {
             $pegawai = $pegawai->where('nama','like','%'.request()->nama.'%');
@@ -144,7 +144,7 @@ class PegawaiController extends Controller
         // $pegawai->alamat = $request ->alamat;    
             
         $pegawai->nohp = $request ->nohp;    
-            
+        // dd($pegawai);
         $pegawai->save();
 
         return redirect('pegawai')->with('success', 'Data berhasil disimpan');
@@ -162,10 +162,10 @@ class PegawaiController extends Controller
         return back()->with('error', 'Data berhasil dihapus');
     }
     
-    public function pdf()
-    {
-        $pegawai=Pegawai::all();
-        $pdf = PDF::loadView('pegawai.pdf', ['pegawai'=>$pegawai]);
-        return $pdf->download('pegawai.pdf');
-    }
+    // public function pdf()
+    // {
+    //     $pegawai=Pegawai::all();
+    //     $pdf = PDF::loadView('pegawai.pdf', ['pegawai'=>$pegawai]);
+    //     return $pdf->download('pegawai.pdf');
+    // }
 }

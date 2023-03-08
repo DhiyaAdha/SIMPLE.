@@ -6,7 +6,7 @@
     <main class="app-content">
         <div class="app-title">
             <div>
-                <h1><i class="fa fa-edit"></i> {{ isset($user) ? 'Edit' : 'Tambah' }} User</h1>
+                <h1><i class="fa fa-edit"></i> {{ isset($user) ? 'Edit' : 'Tambah' }} user</h1>
             </div>
             <ul class="app-breadcrumb breadcrumb">
                 <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -20,30 +20,21 @@
                 <div class="tile">
 
                     <div class="tile-body">
-                        
                         @if (isset($user))
-                            <form class="form-horizontal" action="{{ route('user.update', $user->id) }}"
-                                method="post">
+                        <form class="form-horizontal" action="{{ route('user.update', $user->id) }}"
+                            method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('PUT') }}
+                        @else
+                            {{-- buat pegawai --}}
+                            <form class="form-horizontal" action="{{ route('pegawai.store') }}" method="post">
                                 {{ csrf_field() }}
-                                {{ method_field('PUT') }}
-                            @else
-                                <form class="form-horizontal" action="{{ route('user.store') }}" method="post">
-                                    {{ csrf_field() }}
-                        @endif
+                    @endif
 
-                        @php
-                            // dd($pegawai)
-                        @endphp
-
-                        
-                        <div class="form-group row">
-                            <label class="control-label col-md-3">Nama</label>
-                            <div class="col-md-8">
-                                <input required class="form-control" type="text" name="name"
-                                    value="{{ isset($user) ? $user->nama : '' }}">
-                            </div>
-                        </div>
-                        
+                    @php
+                        // dd($pegawai)
+                    @endphp
+\
 
                         {{-- <div class="form-group row">
                             <label class="control-label col-md-3">Alamat</label>
@@ -53,34 +44,50 @@
                         </div> --}}
 
                         <div class="form-group row">
-                          <label class="control-label col-md-3">Nama | Email </label>
-                          <div class="col-md-8">
-                              <input required class="form-control" type="text" name="email"
-                                  value="{{ isset($user) ? $user->email : '' }}">
-                          </div>
+                            <label class="control-label col-md-3">Nama</label>
+                            <div class="col-md-8">
+                                <input required class="form-control" type="text" name="name"
+                                    value="{{ isset($user) ? $user->name : '' }}">
+                            </div>
                         </div>
 
                         <div class="form-group row">
-                          <label class="control-label col-md-3">Nama | Password </label>
-                          <div class="col-md-8">
-                              <input required class="form-control" type="text" name="password"
-                                  value="{{ isset($user) ? $user->password : '' }}">
+                            <label class="control-label col-md-3">Nama | Email </label>
+                            <div class="col-md-8">
+                                <input required class="form-control" type="text" name="email"
+                                    value="{{ isset($user) ? $user->email : '' }}">
+                            </div>
                           </div>
-                        </div>
+
+                        <div class="form-group row">
+                            <label class="control-label col-md-3">Nama | Password </label>
+                            <div class="col-md-8">
+                                <input required class="form-control" type="text" name="password"
+                                    value="{{ isset($user) ? $user->password : '' }}">
+                            </div>
+                          </div>
                         
                         {{-- <div class="form-group row">
                             <label class="control-label col-md-3">Foto</label>
                             <div class="col-md-8">
                                 <input class="form-control col-md-8" type="file" name="foto"
-                                value="{{ isset($user) ? $user->foto : '' }}">
+                                value="{{ isset($pegawai) ? $pegawai->foto : '' }}">
                             </div>
                         </div> --}}
-
+{{--                         
                         <div class="form-group row">
-                            <label class="control-label col-md-3">Jenis Keryawan</label>
+                            <label class="control-label col-md-3">Nomor HP</label>
                             <div class="col-md-8">
-                                <select class="form-control" name="role_id" id="exampleSelect1">
-                                    <option selected>Pilih Jenis User </option>
+                                <input required class="form-control" type="number" name="nohp"
+                                value="{{ isset($pegawai) ? $pegawai->nohp : '' }}">
+                            </div>
+                        </div> --}}
+                        
+                        <div class="form-group row">
+                            <label class="control-label col-md-3">Jenis User</label>
+                            <div class="col-md-8">
+                                <select class="form-control" name="role_user_id" id="exampleSelect1">
+                                    {{-- <option selected>Pilih Jenis User </option>     --}}
                                     <option value="2">Admin</option>
                                     <option value="3">Karyawan</option>
                                     <option value="4">Client</option>
@@ -88,6 +95,7 @@
                                 </select>
                             </div>
                         </div>
+                        
                         
                     </div>
 
@@ -107,5 +115,6 @@
                 </div>
             </div>
         </div>
+        
     </main>
 @endsection

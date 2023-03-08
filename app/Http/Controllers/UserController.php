@@ -52,7 +52,7 @@ class UserController extends Controller
         $user->name = $request ->name;
         $user->email = $request->email;
         $user->password = $request->password;
-        $user->role_id = $request ->role_id;
+        $user->role_user_id = $request ->role_user_id;
         // dd($user);
         $user->save();
 
@@ -97,7 +97,6 @@ class UserController extends Controller
         $user->name = $request ->name;
         $user->email = $request ->email;
         $user->password = $request ->password;
-
         $user->role_user_id = $request ->role_user_id;
         // $pegawai->agama_id = $request ->agama_id;
         // $pegawai->negara_id = $request ->negara_id;
@@ -106,7 +105,7 @@ class UserController extends Controller
         // $pegawai->foto = $request ->foto;
         // $pegawai->alamat = $request ->alamat;    
             
-            dd($user);
+            // dd($user);
         $user->save();
 
     }
